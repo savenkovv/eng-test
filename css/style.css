@@ -1,0 +1,45 @@
+@font-face {
+	font-family: "Evolventa-Bold";
+	src: url('../fonts/Evolventa-Bold.ttf');
+}
+@font-face {
+	font-family: "Evolventa";
+	src: url('../fonts/Evolventa.ttf');
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: "Evolventa";
+	letter-spacing: 1px;
+	font-size: 14px;
+}
+a {
+	color: #000;
+}
+a:hover {
+	color: #000;
+	text-decoration: none;
+}
+.container {
+	max-width: 66%;
+}
+.main-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background: #000;
+	width: 100%;
+	position: fixed;
+	height: 48px;
+	z-index: 6;
+	color: #fff;
+	top: 0;
+}
+.main-area {
+	margin-top: 60px;
+	height: 100%;
+}
+.hr1 {
+	width: 100%;
+}
