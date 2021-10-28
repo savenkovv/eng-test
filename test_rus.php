@@ -23,7 +23,7 @@
 
   <header class="main-header">
     <div class="container d-flex justify-content-between align-items-center">
-      <div class="page-name"><b>ТЕСТ ENG</b></div>
+      <div class="page-name"><b>ТЕСТ RUS</b></div>
       <div class="links">
         <a href="index.php" class="border rounded p-2">Словарь</a>
         <a href="test_eng.php" class="border rounded p-2">Тест ENG</a>
@@ -36,19 +36,18 @@
 
     <div class="container">
       <div class="shadow-lg bg-white main-area p-4 col-12">
-        <form action="check.php" method="post" class="d-flex flex-column col-12">
-        
+        <form action="check.php" class="d-flex flex-column col-12">
+          
           <?php
-            $i=1;
+            $i=0;
             shuffle($words);
           ?>
           <?php foreach ($words as $word): ?>
             <div class="d-flex flex-row form-group align-items-center col-10 justify-content-start m-0">
-              <div class="word1 col-3"><b><?php echo $word['word1'];?></b></div>
-              <input type="text" class="word2 m-2 col-3" name=<?php echo "w"."$i";?>>
-              <input type="hidden" name="<?php echo "id".$i;?>" value="<?php echo $word['id'];?>">
+              <div class="word1 col-3"><b><?php echo $word['word2'];?></b></div>
+              <input type="text" class="word2 m-2 col-3" name=<?php echo "w".$i;?>>
             </div><hr class="hr1">
-          <?php if(++$i == 2) break;?>
+          <?php if(++$i == 10) break;?>
           <?php endforeach;?>
           <button id="create" name="create" type="submit" class="btn btn-primary col-3">Проверить</button>
         </form>

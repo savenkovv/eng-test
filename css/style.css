@@ -81,7 +81,18 @@ html, body {
 .words:nth-child(2n){
 	background: #e6e6e6;
 }
-
+.edit-btn-pen{
+	color:dimgray!important;
+}
+.edit-btn-pen:hover {
+	color:#353535!important;
+}
+.edit-btn-trash{
+	color: #b22222!important;
+}
+.edit-btn-trash:hover {
+	color:#641010!important;
+}
 .logout {
 	color: #fff;
 	font-size: 16px;

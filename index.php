@@ -25,6 +25,7 @@
     <div class="container d-flex justify-content-between align-items-center">
       <div class="page-name"><b>СЛОВАРЬ</b></div>
       <div class="links">
+        <a href="index.php" class="border rounded p-2">Словарь</a>
         <a href="test_eng.php" class="border rounded p-2">Тест ENG</a>
         <a href="test_rus.php" class="border rounded p-2">Тест RUS</a>
       </div>
@@ -37,38 +38,38 @@
       <div class="shadow-lg bg-white main-area p-4 col-12">
 
         <div class="d-flex flex-column col-12">
+          <div class="m-2">
+              <?php
+                  if (isset($_SESSION['success'])){
+                      display_flash_message("success");
+                  }
+                  if (isset($_SESSION['danger'])){
+                      display_flash_message("danger");
+                  }
+              ?>
+          </div>
           <button type="button" class="btn btn-success m-4 w-50" data-toggle="modal" data-target="#exampleModal">
             Добавить новое слово
           </button>
           
-            <div class="d-flex flex-row align-items-center flex-wrap justify-content-start col-12">
-              <?php foreach ($words as $word): ?>
-                <div class="d-flex align-items-center col-12 border-bottom words">
+            <div class="d-flex flex-row align-items-center flex-wrap justify-content-around col-12">
+
+              <?php foreach ($words as $key => $word): ?>
+                <div class="d-flex align-items-center col-12 border-bottom words p-0">
                   <div class="word1 m-1 col-5"><b><?php echo $word['word1'];?></b></div>
                   <div class="col">-</div>
                   <div class="word2 m-1 col-5"><b><?php echo $word['word2'];?></b></div>
-                  <div class="col-1">
-                    <button type="button" class="btn btn-secondary p-2">!</button>
-                    <button type="button" class="btn btn-danger p-2">x</button>
+                  <div class="">
+                    <a href="#" role="button" class="fas fa-pen mr-1 edit-btn-pen"></a>
+                    <a href="#" role="button" class="fas fa-trash-alt ml-1 mr-1 edit-btn-trash"></a>
                   </div>
-                  
-                  
-                  
                 </div>
+              
               <?php endforeach;?>  
             </div>
           
         </div> 
-        <div class="m-2">
-            <?php
-                if (isset($_SESSION['success'])){
-                    display_flash_message("success");
-                }
-                if (isset($_SESSION['danger'])){
-                    display_flash_message("danger");
-                }
-            ?>
-        </div>
+        
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
