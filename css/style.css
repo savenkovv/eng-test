@@ -65,21 +65,22 @@ html, body {
 	letter-spacing: 1px;
 	font-size: 14px;
 }
-a {
-	color: #000;
-}
-a:hover {
-	color: #000;
-	text-decoration: none;
-}
 .container {
 	max-width: 66%;
 }
 .flash-msg-log {
 	width: 320px;
 }
-
-
+.word1 {
+	word-wrap: break-word;
+}
+.word2 {
+	color: #3f3f3f;
+	word-wrap: break-word;
+}
+.words:nth-child(2n){
+	background: #e6e6e6;
+}
 
 .logout {
 	color: #fff;
